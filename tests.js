@@ -14,7 +14,7 @@ describe('helloWorld', function() {
     });
 });
 
-//unit test for exercise one
+//unit test for sayHello function
 describe('sayHello',function() {
     it('should be a defined function', function () {
         expect(typeof sayHello).toBe('function');
@@ -39,6 +39,17 @@ describe('sayHello',function() {
     });
     it('should return the string "Hello, World!" when executed', function() {
         expect(sayHello(false)).toBe("Hello, World!");
+    });
+});
+
+//unit test for isFive function
+
+describe('isFive',function() {
+    it('should be a defined function', function () {
+        expect(typeof isFive).toBe('function');
+    });
+    it('should return true no matter what when executed', function () {
+        expect(typeof isFive()).toBe("boolean");
     });
 });
 
