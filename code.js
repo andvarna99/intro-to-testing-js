@@ -5,6 +5,10 @@ function helloWorld() {
 
 //sayHello function
 function sayHello(name) {
-    return "Hello, " + name + "!";
+        if (typeof name === "string") {
+            return "Hello, " + name + "!";
+        }else if (name === undefined || true){
+            return "Hello, World!";
+        }
 }
 sayHello();
