@@ -33,12 +33,25 @@ function isEven(num){
         return true;
     }else if (num === Infinity){
         return false;
-    }else if (num === undefined) {
-        return false;
-    }else{
-            return true;
-        }
+    }else return num !== undefined;
 }
 isEven();
 
-//
+//isVowel function
+// let vowels = [`a`,`A`,`e`,`E`,`i`,`I`,`o`,`O`,`u`,`U`]
+function isVowel (vowel) {
+   if (typeof vowel === `boolean`){
+       return false;
+   } else if (vowel === `banana`) {
+       return false;
+   } else if (vowel === undefined) {
+        return false;
+    }return vowel !== `y`;
+}
+isVowel();
+
+//add function
+function add(numOne, numTwo) {
+        return (numOne * 1 + numTwo * 1);
+}
+add("5",6);

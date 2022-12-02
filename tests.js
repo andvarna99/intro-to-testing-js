@@ -89,3 +89,59 @@ describe('isEven',function() {
     });
 });
 
+//unit test for the isVowel function
+describe('isVowel',function() {
+    it('should be a defined function', function () {
+        expect(typeof isVowel).toBe('function');
+    });
+    it('should always return a boolean when executed', function () {
+        expect(typeof isVowel()).toBe("boolean");
+    });
+    it('should return true when executed with "a"', function() {
+        expect(isVowel("a")).toBe(true);
+    });
+    it('should return true when executed with "A"', function() {
+        expect(isVowel("A")).toBe(true);
+    });
+    it('should return false when executed with "y"', function() {
+        expect(isVowel("y")).toBe(false);
+    });
+    it('should return false when executed with boolean inputs', function() {
+        expect(isVowel(true)).toBe(false);
+        expect(isVowel(false)).toBe(false);
+    });
+    it('should return false when executed with "banana"', function() {
+        expect(isVowel("banana")).toBe(false);
+    });
+    it('should return false when executed without an argument', function () {
+        expect(isVowel()).toBe(false);
+    });
+});
+
+//unit test for the add function
+describe('add',function() {
+    it('should be a defined function', function () {
+        expect(typeof add).toBe('function');
+    });
+    it('should return 5 when executed with 2 and 3', function() {
+        expect(add(2,3)).toBe(5);
+    });
+    it('should return -12 when executed with -3 and -9', function() {
+        expect(add(-3,-9)).toBe(-12);
+    });
+    it('should return 11 when executed with "5" and 6', function() {
+        expect(add("5",6)).toBe(11);
+    });
+    it('should return 6 when executed with "-4" and "10"', function() {
+        expect(add("-4","10")).toBe(6);
+    });
+    it('should return NaN when executed with "banana" and "split"', function() {
+        expect(add("banana","split").toString()).toBe("NaN");
+    });
+    it('should return NaN when executed with 2 and "apples"', function() {
+        expect(add(2,"apples").toString()).toBe("NaN");
+    });
+    it('should return NaN when executed with nothing', function() {
+        expect(add().toString()).toBe("NaN");
+    });
+});
